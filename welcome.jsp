@@ -21,9 +21,7 @@
 	String greeting = "웹 쇼핑몰에 오신 것을 환영 합니다.";
 	String tagline = "Welcome to Web Market!";
 	%>
-	<% //그냥 자바코드, 선언도 가능
-	
-	%>
+	<% //그냥 자바코드, 선언도 가능 %>
 
 	<div class="p-5 bg-primary text-white">
 		<div class="container">
