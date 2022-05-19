@@ -38,11 +38,11 @@ public class ProductRepository {
 		return products;
 	}
 	
-	// ID濡� �긽�뭹 李얘린
+	// ID로 상품 찾기
 	public Product getProductById(String productId) {
-		return products.stream() //stream(): 由ъ뒪�듃�쓽 �궡�슜�쓣 �쓽�젮蹂대궦�떎
-				.filter((product) -> product.getProductId().equals(productId)) // 洹몄쨷 �븘�슂�븳嫄곕�� 嫄곕Ⅴ湲�
-				.findFirst() // 泥ル쾲吏� 寃껋쓣
-				.get(); // �뼸�쓬
+		return products.stream() //stream(): 리스트의 내용이 흘러감
+				.filter((product) -> product.getProductId().equals(productId)) // 필요한것 거르기
+				.findFirst() // 첫번째 것을
+				.get(); // 얻음
 	}
 }
