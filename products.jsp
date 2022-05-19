@@ -14,12 +14,27 @@
 </head>
 <body>
 	<jsp:include page="menu.jsp" />
-	<%
-		List<Product> products = repository.getAllProducts();
-		for (Product product: products) {
-			out.println(product + "<br><br>");
-		}
-	%>
+	
+	<div class="p-5 bg-primary text-white">
+		<div class="container">
+			<h1 class="display-3 text-center">상품 목록</h1>
+		</div>
+	</div>
+	
+	<% List<Product> products = repository.getAllProducts(); %>
+	
+	<div class="container">
+  		<div class="row text-center">
+  			<% for (Product product: products) { %>
+	    		<div class="col-md-4">
+	    			<h3><%= product.getName() %></h3>
+	    			<p><%= product.getDescription() %></p>
+	    			<p><%= product.getUnitPrice() %>원</p>
+	    			<p><%= product.getDescription() %></p>
+	    		</div>
+  			<% } %>
+  		</div>
+	</div>
 	<jsp:include page="footer.jsp" />
 </body>
 
