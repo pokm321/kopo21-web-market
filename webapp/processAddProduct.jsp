@@ -3,7 +3,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
 <%
 // 한글 안깨지게
-request.setCharacterEncoding("UTF-8");
+// request.setCharacterEncoding("UTF-8");
 
 String productId = request.getParameter("productId");
 String name = request.getParameter("name");
