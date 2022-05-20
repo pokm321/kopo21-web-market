@@ -3,8 +3,6 @@
 <%@ page import="dao.ProductRepository"%>
 <%@ page import="java.util.List"%>
 <%@ page import="dto.Product"%>
-<jsp:useBean id="repository" class="dao.ProductRepository"
-	scope="session" />
 <!DOCTYPE html>
 <html>
 
@@ -23,8 +21,11 @@
 			<h1 class="display-3 text-center">상품 목록</h1>
 		</div>
 	</div>
+	<%
+	ProductRepository repository = ProductRepository.getInstance();
 
-	<% List<Product> products = repository.getAllProducts(); %>
+	List<Product> products = repository.getAllProducts();
+	%>
 
 	<div class="container">
 		<div class="row text-center">

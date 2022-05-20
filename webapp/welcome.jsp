@@ -33,7 +33,7 @@
 		<div class="text-center">
 			<h3><%= tagline %></h3>
 		    <%
-		    	response.setIntHeader("Refresh", 1);
+		    	response.setIntHeader("Refresh", 10);
 			    Date today = new Date();
 			    SimpleDateFormat format = new SimpleDateFormat("hh:mm:ss a");
 			    out.println("현재 접속 시간: " + format.format(today));

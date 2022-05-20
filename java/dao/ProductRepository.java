@@ -6,7 +6,14 @@ import dto.Product;
 
 public class ProductRepository {
 	private List<Product> products = new ArrayList<>();
-
+	
+	// 하나의 객채를 생성 후 인스턴스를 재사용하는 싱글턴 패턴
+	private static ProductRepository instance = new ProductRepository();
+	
+	public static ProductRepository getInstance() {
+		return instance;
+	}
+		
 	public ProductRepository () {
 		Product phone = new Product("P1234", "iphone 6s", 800000);
 		phone.setDescription("4.7-inch, 1334X750 Retina HD display");
@@ -45,4 +52,10 @@ public class ProductRepository {
 				.findFirst() // 첫번째 것을
 				.get(); // 얻음
 	}
+	
+	// 상품 추가
+	public void addProduct(Product product) {
+		products.add(product);
+	}
 }
+
