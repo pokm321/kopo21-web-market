@@ -1,7 +1,6 @@
 <%@page import="dto.Product"%>
 <%@page import="dao.ProductRepository"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
 <%
 // 한글 안깨지게
 request.setCharacterEncoding("UTF-8");
@@ -15,8 +14,6 @@ Product newProduct = new Product(productId, name, unitPrice);
 ProductRepository repository = ProductRepository.getInstance();
 repository.addProduct(newProduct);
 
-// response.
-
-
+response.sendRedirect("products.jsp");
 %>
 

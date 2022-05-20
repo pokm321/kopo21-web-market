@@ -18,34 +18,37 @@
 	</div>
 
 	<div class="container">
-		<form name="newProduct" action="./processAddProduct.jsp"
-			class="form-horizontal" method="post"></form>
-		<div class="form-group row mt-3">
-			<label class="col-sm-2">상품 코드</label>
-			<div class="col-sm-3">
-				<input type="text" name="productId" class="form-control">
+		<form name="newProduct" action="./processAddProduct.jsp" class="form-horizontal" method="post">
+			<div class="form-group row mt-3">
+				<label class="col-sm-2">상품 코드</label>
+				<div class="col-sm-3">
+					<input type="text" name="productId" class="form-control">
+				</div>
 			</div>
-		</div>
-		<div class="form-group row mt-3">
-			<label class="col-sm-2">상품명</label>
-			<div class="col-sm-3">
-				<input type="text" name="name" class="form-control">
+			<div class="form-group row mt-3">
+				<label class="col-sm-2">상품명</label>
+				<div class="col-sm-3">
+					<input type="text" name="name" class="form-control">
+				</div>
 			</div>
-		</div>
-		<div class="form-group row mt-3">
-			<label class="col-sm-2">가격</label>
-			<div class="col-sm-3">
-				<input type="text" name="unitPrice" class="form-control">
+			<div class="form-group row mt-3">
+				<label class="col-sm-2">가격</label>
+				<div class="col-sm-3">
+					<input type="text" name="unitPrice" class="form-control">
+				</div>
 			</div>
-		</div>
+
+			<div class="form-group row">
+				<div class="col-sm-offset-2 col-sm-10">
+					<input type="submit" class="btn btn-primary" value="등록">
+				</div>
+			</div>
+
+		</form>
 	</div>
 
 
-	<div class="form-group div">
-	  <div class="col-sm-offset-2 col-sm-10">
-	    <input type="text" class="btn btn-primary" value="등록">
-	  </div>
-	</div>
+
 
 	<jsp:include page="footer.jsp" />
 </body>
